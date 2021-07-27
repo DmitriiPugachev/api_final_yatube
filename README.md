@@ -18,7 +18,9 @@
 
 Клонировать репозиторий и перейти в него в командной строке:
 
-https://github.com/DmitriiPugachev/api_final_yatube.git
+```
+git clone https://github.com/DmitriiPugachev/api_final_yatube.git
+```
 
 ```
 cd api_final_yatube
