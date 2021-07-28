@@ -59,3 +59,15 @@ class Follow(models.Model):
         on_delete=models.CASCADE,
         related_name='following'
     )
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=['user', 'following'],
+                name='unique_follow_pair'
+            ),
+            models.CheckConstraint(
+                check=~models.Q(user=models.F('following')),
+                name='user_and_author_can_not_be_equal'
+            ),
+        ]

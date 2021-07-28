@@ -1,9 +1,8 @@
 """API app v.1 serializers."""
 
 
-from rest_framework import serializers, validators
-
 from posts.models import Comment, Follow, Group, Post, User
+from rest_framework import serializers, validators
 
 
 class GroupSerializer(serializers.ModelSerializer):

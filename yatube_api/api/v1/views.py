@@ -2,9 +2,8 @@
 
 
 from django.shortcuts import get_object_or_404
+from posts.models import Group, Post
 from rest_framework import filters, mixins, pagination, permissions, viewsets
-
-from posts.models import Group, Post, User
 
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
@@ -63,11 +62,8 @@ class FollowLightViewSet(CreateListViewSet):
 
     def get_queryset(self):
         """Redefinition of get_queryset method for FollowLightViewSet."""
-        current_user = get_object_or_404(
-            User,
-            username=self.request.user.username
-        )
-        return current_user.follower.all()
+        user = self.request.user
+        return user.follower.all()
 
     def perform_create(self, serializer):
         """Redefinition of perform_create method for FollowLightViewSet."""
