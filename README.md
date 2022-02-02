@@ -35,6 +35,8 @@ Install dependencies from ```requirements.txt```:
 ```bash
 pip install -r requirements.txt
 ```
+Create a ```.env``` file in the root directory and fulfill it like in an ```example.env``` file.
+
 Migrate:
 ```bash
 python3 manage.py migrate
