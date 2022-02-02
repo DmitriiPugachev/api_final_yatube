@@ -1,5 +1,5 @@
 ### Description:
-Проект сервиса API для YaTube.
+API for YaTube.
 #### You can:
   * get, create, update and delete posts;
   * get an information about groups;
