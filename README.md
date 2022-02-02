@@ -161,6 +161,9 @@ python3 manage.py runserver
 ```bash
 /api/v1/jwt/verify/
 ```
+### Links
+[redoc](http://127.0.0.1:8000/redoc/) this link is for local usage
 
+[admin](http://127.0.0.1:8000/admin/)  this link is for local usage
 ### Author
 Dmitrii Pugachev
