@@ -1,4 +1,4 @@
-"""API app v.1 URLs."""
+"""API app URLs."""
 
 
 from django.urls import include, path
