@@ -62,7 +62,7 @@ class FollowSerializer(serializers.ModelSerializer):
         ]
 
     def validate(self, data):
-        """Validate user not equal following"""
+        """Validate user not equal following."""
         if self.context['request'].user == data['following']:
             raise validators.ValidationError(
                 'You can not follow yourself.'
